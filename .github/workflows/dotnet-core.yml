@@ -27,6 +27,8 @@ jobs:
       run: dotnet test --no-restore --verbosity normal
     
     #package
+    - name: Package NUGET
+      run: dotnet pack --configuration Release
     - name: Publish to NUGET
       uses: brandedoutcast/publish-nuget@v2.5.4
       with:
