@@ -12,7 +12,8 @@ namespace Rave.NET.Config
         /// <summary>
         /// Sandbox REST API endpoint
         /// </summary>
-        public const string SanboxUrl = "https://api.ravepay.co";
+        //public const string SanboxUrl = "https://api.ravepay.co";
+        public const string SanboxUrl = "https://ravesandboxapi.flutterwave.com";
 
         /// <summary>
         /// Live REST API endpoint

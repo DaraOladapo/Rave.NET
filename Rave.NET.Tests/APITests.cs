@@ -21,8 +21,10 @@ namespace Rave.NET.Tests
         string successfulFwRef = Environment.GetEnvironmentVariable("successfulFwRef");
         string unCapturedFwRef = Environment.GetEnvironmentVariable("unCapturedFwRef");
         string tranxRef = Environment.GetEnvironmentVariable("tranxRef");
-        string PbKey = Environment.GetEnvironmentVariable("PbKey");
-        string ScKey = Environment.GetEnvironmentVariable("ScKey");
+        //string PbKey = Environment.GetEnvironmentVariable("PbKey");
+        //string ScKey = Environment.GetEnvironmentVariable("ScKey"); 
+        string PbKey = "FLWPUBK_TEST-e249f67527cbc6331261c8d935fa5735-X";
+        string ScKey = "FLWSECK_TEST-3bca3e0b02cff2b0f79d7b83fb81fb67-X";
         [Fact]
         public void preauthTest()
         {
