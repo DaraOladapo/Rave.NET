@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Dara Oladapo</Authors>
+    <Company>Dara Oladapo</Company>
+    <Description>Flutterwave RAVE Payment API Library for .NET.</Description>
+    <RepositoryUrl>https://github.com/DaraOladapo/Rave.NET</RepositoryUrl>
+    <PackageTags>Payment API, Payment Gateway, Flutterwave, Flutterwave .NEt, Flutterwave RAVE, RAVE API, Flutterwave Payment Gateway</PackageTags>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
 </Project>
