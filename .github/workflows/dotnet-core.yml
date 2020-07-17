@@ -27,7 +27,8 @@ jobs:
       run: dotnet test --no-restore --verbosity normal
     
     #package
-    - name: Package for NUGET
-      run: dotnet pack --configuration Release
     - name: Publish to NUGET
-      run: dotnet nuget push "bin/Release/Rave.NET.1.0.0.nupkg" --source "github"
+      uses: brandedoutcast/publish-nuget@v2.5.4
+      with:
+          PROJECT_FILE_PATH: Rave.NET/Rave.NET.csproj
+          NUGET_KEY: ${{secrets.NUGET_KEY}}
