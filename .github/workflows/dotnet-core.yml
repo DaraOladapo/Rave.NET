@@ -23,3 +23,7 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: Test
       run: dotnet test --no-restore --verbosity normal
+    - name: Package for NUGET
+      run: dotnet pack --configuration Release
+    - name: Publish to NUGET
+      run: dotnet nuget push "bin/Release/Rave.NET.1.0.0.nupkg" --source "github"
