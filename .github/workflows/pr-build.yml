@@ -1,7 +1,7 @@
 name: .NET Core
 
 on:
-  push:
+  pull_request:
     branches: [ master ]
 
 jobs:
@@ -24,11 +24,3 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     
-    #package
-    - name: Package NUGET
-      run: dotnet pack --configuration Release
-    - name: Publish to NUGET
-      uses: brandedoutcast/publish-nuget@v2.5.4
-      with:
-          PROJECT_FILE_PATH: Rave.NET/Rave.NET.csproj
-          NUGET_KEY: ${{secrets.NUGET_KEY}}
