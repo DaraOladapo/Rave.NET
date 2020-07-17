@@ -11,6 +11,7 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageIcon>flwicon.png</PackageIcon>
+    <Copyright>Dara Oladapo</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
