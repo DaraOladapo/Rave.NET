@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <ReleaseVersion>0.01</ReleaseVersion>
+    <ReleaseVersion>0.01-beta</ReleaseVersion>
     <Version>1.0.1</Version>
     <Authors>Dara Oladapo</Authors>
     <Company>Dara Oladapo</Company>
