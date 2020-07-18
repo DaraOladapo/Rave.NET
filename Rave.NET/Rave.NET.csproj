@@ -15,9 +15,11 @@
     <ApplicationIcon>flwicon.ico</ApplicationIcon>
     <ReleaseVersion>0.02</ReleaseVersion>
     <Version>1.0.2</Version>
-    <AssemblyVersion>1.0.1.2</AssemblyVersion>
-    <FileVersion>1.0.1.2</FileVersion>
-     <PackageVersion>1.0.1-alpha</PackageVersion>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
+    <PackageReleaseNotes>This version of release may contain some bugs as not all unit tests passed.
+
+Project is open to contribution.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
