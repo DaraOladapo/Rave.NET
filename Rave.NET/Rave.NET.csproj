@@ -3,8 +3,6 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <ReleaseVersion>0.01</ReleaseVersion>
-    <Version>1.0.1</Version>
     <Authors>Dara Oladapo</Authors>
     <Company>Dara Oladapo</Company>
     <Description>Flutterwave RAVE Payment API Library for .NET.</Description>
@@ -15,6 +13,11 @@
     <PackageIcon>flwicon.png</PackageIcon>
     <Copyright>Dara Oladapo</Copyright>
     <ApplicationIcon>flwicon.ico</ApplicationIcon>
+    <ReleaseVersion>0.01</ReleaseVersion>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.1.1</AssemblyVersion>
+    <FileVersion>1.0.1.1</FileVersion>
+     <PackageVersion>1.0.1-alpha</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -37,6 +40,12 @@
     <None Update="Assets\flwicon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetEnv" Version="1.4.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="RestSharp" Version="106.11.4" />
   </ItemGroup>
 
 </Project>
