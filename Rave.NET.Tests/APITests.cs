@@ -17,12 +17,16 @@ namespace Rave.NET.Tests
 {
     public class APITests
     {
+        public APITests()
+        {
+            DotNetEnv.Env.Load();
+        }
         string txRef = Environment.GetEnvironmentVariable("txRef");
         string successfulFwRef = Environment.GetEnvironmentVariable("successfulFwRef");
         string unCapturedFwRef = Environment.GetEnvironmentVariable("unCapturedFwRef");
         string tranxRef = Environment.GetEnvironmentVariable("tranxRef");
-        //string PbKey = Environment.GetEnvironmentVariable("PbKey");
-        //string ScKey = Environment.GetEnvironmentVariable("ScKey"); 
+        // string PbKey = Environment.GetEnvironmentVariable("PbKey");
+        // string ScKey = Environment.GetEnvironmentVariable("ScKey");
         string PbKey = "FLWPUBK_TEST-e249f67527cbc6331261c8d935fa5735-X";
         string ScKey = "FLWSECK_TEST-3bca3e0b02cff2b0f79d7b83fb81fb67-X";
         [Fact]
@@ -171,7 +175,7 @@ namespace Rave.NET.Tests
         public void VirtualStaticAccountTest()
         {
             var virtuala = new VirtualAccount();
-            var virtualaccountparams = new VirtualAccountParams("TEST-C-ACCOUNT", ScKey, "d@gmail.com", "TRF-SHDJß");
+            var virtualaccountparams = new VirtualAccountParams("TEST-C-ACCOUNT", ScKey, "d@gmail.com", "TRF-SHDJï¿½");
 
             var chargeResponse = virtuala.CreateStaticVirtualAccount(virtualaccountparams);
 
@@ -186,7 +190,7 @@ namespace Rave.NET.Tests
         public void VirtualTransactionAccountTest()
         {
             var virtuala = new VirtualAccount();
-            var virtualaccountparams = new VirtualAccountParams("TEST-C-ACCOUNT", ScKey, "d@gmail.com", "TRF-SHDJß", "100");
+            var virtualaccountparams = new VirtualAccountParams("TEST-C-ACCOUNT", ScKey, "d@gmail.com", "TRF-SHDJï¿½", "100");
 
             var chargeResponse = virtuala.CreateTransactionVirtualAccount(virtualaccountparams);
 
@@ -201,7 +205,7 @@ namespace Rave.NET.Tests
         public void VirtualDurationAccountTest()
         {
             var virtuala = new VirtualAccount();
-            var virtualaccountparams = new VirtualAccountParams(1, 2, "TEST-C-ACCOUNT", ScKey, "d@gmail.com", "TRF-SHDJß", "100");
+            var virtualaccountparams = new VirtualAccountParams(1, 2, "TEST-C-ACCOUNT", ScKey, "d@gmail.com", "TRF-SHDJï¿½", "100");
 
             var chargeResponse = virtuala.CreateTransactionVirtualAccount(virtualaccountparams);
 
