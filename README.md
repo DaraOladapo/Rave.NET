@@ -36,15 +36,15 @@ Add all relevant modules
 ```bash
     using System.Diagnostics;
     using System.Collections.Generic;
-    using Rave.Models.MobileMoney;
-    using Rave.Models.VirtualCard;
-    using Rave.Models.Subaccount;
-    using Rave.Models.Tokens;
-    using Rave.Models;
-    using Rave.Models.Charge;
-    using Rave.Models.Account;
-    using Rave.Models.Card;
-    using Rave.Models.Validation;
+    using Rave.NET.Models.MobileMoney;
+    using Rave.NET.Models.VirtualCard;
+    using Rave.NET.Models.Subaccount;
+    using Rave.NET.Models.Tokens;
+    using Rave.NET.Models;
+    using Rave.NET.Models.Charge;
+    using Rave.NET.Models.Account;
+    using Rave.NET.Models.Card;
+    using Rave.NET.Models.Validation;
     using NUnit.Framework;
 ```
 
