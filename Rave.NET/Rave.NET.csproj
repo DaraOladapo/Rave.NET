@@ -13,10 +13,11 @@
     <PackageIcon>flwicon.png</PackageIcon>
     <Copyright>Dara Oladapo</Copyright>
     <ApplicationIcon>flwicon.ico</ApplicationIcon>
-    <ReleaseVersion>0.01-beta</ReleaseVersion>
+    <ReleaseVersion>0.01</ReleaseVersion>
     <Version>1.0.1</Version>
     <AssemblyVersion>1.0.1.1</AssemblyVersion>
     <FileVersion>1.0.1.1</FileVersion>
+     <PackageVersion>1.0.1-alpha</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
