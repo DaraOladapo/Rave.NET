@@ -33,19 +33,27 @@ The Library also implements the following features:
 
 Using .NET CLI
 
-`dotnet add package Rave.NET --version 1.0.2`
+```bash
+dotnet add package Rave.NET --version 1.0.2
+```
 
 Using Package Manager Console
 
-`Install-Package Rave.NET -Version 1.0.2`
+```PowerShell
+Install-Package Rave.NET -Version 1.0.2
+```
 
 Using Package Reference
- 
-`<PackageReference Include="Rave.NET" Version="1.0.2" />`
+
+```XML
+<PackageReference Include="Rave.NET" Version="1.0.2" />
+```
 
 Using Paket CLI
 
-`paket add Rave.NET --version 1.0.2`
+```Bash
+paket add Rave.NET --version 1.0.2
+```
 
 ## Usage
 
