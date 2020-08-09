@@ -4,6 +4,8 @@
 
 The following was copied as is from the offical project found [here](https://github.com/Flutterwave/Flutterwave-dotnet) with modifications.
 
+![.NET Core](https://github.com/DaraOladapo/Rave.NET/workflows/.NET%20Core/badge.svg)
+
 ## Introduction
 
 The Rave .NET Library implements the following payment services:
@@ -67,8 +69,7 @@ private static RaveConfig raveConfig = new RaveConfig(PbKey, ScKey, false);
 ```
 
 - Create Card
-    
-   Create a card taking in your user's input
+ Create a card taking in your user's input
 
 ```C#
 private static Card card = new Card(CardNumber, ExpiryMonth, ExpiryYear, CVV);
