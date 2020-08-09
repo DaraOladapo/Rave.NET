@@ -4,6 +4,8 @@
 
 The following was copied as is from the offical project found [here](https://github.com/Flutterwave/Flutterwave-dotnet) with modifications.
 
+![.NET Core](https://github.com/DaraOladapo/Rave.NET/workflows/.NET%20Core/badge.svg)
+
 ## Introduction
 
 The Rave .NET Library implements the following payment services:
@@ -29,7 +31,105 @@ The Library also implements the following features:
 
 ## Installation
 
-## Configuration
+Using .NET CLI
+
+`dotnet add package Rave.NET --version 1.0.2`
+
+Using Package Manager Console
+
+`Install-Package Rave.NET -Version 1.0.2`
+
+Using Package Reference
+ 
+`<PackageReference Include="Rave.NET" Version="1.0.2" />`
+
+Using Paket CLI
+
+`paket add Rave.NET --version 1.0.2`
+
+## Usage
+
+- Import Namespaces
+
+``` C#
+using Rave.NET.API;
+using Rave.NET.Models.Card;
+using Rave.NET.Models.Charge;
+```
+
+- Set up Rave Configuration
+
+    Rave Config takes in 3 arguments
+  - PbKey: Public key
+  - ScKey: Secret Key
+  - false/true: false if test key, true if live keys
+
+```C#
+private static RaveConfig raveConfig = new RaveConfig(PbKey, ScKey, false);
+```
+
+- Create Card
+ Create a card taking in your user's input
+
+```C#
+private static Card card = new Card(CardNumber, ExpiryMonth, ExpiryYear, CVV);
+```
+
+- Create payload and card charge for Rave API
+
+```C#
+  private static CardParams payload = new CardParams(PbKey, ScKey, "Anonymous", "Tester", "user@example.com", 50000, "NGN", card) { TxRef = tranxRef };
+  private static ChargeCard cardCharge = new ChargeCard(raveConfig);
+```
+
+- Charge Card
+
+```C#
+RaveResponse<ResponseData> chargeResult = new API.RaveResponse<ResponseData>();
+chargeResult = await cardCharge.Charge(payload);
+```
+
+- The following logic will be based on the result of the charge. The code sample below was written for Xamarin.Forms
+
+```C#
+if (chargeResult.Message == "AUTH_SUGGESTION" && chargeResult.Data.SuggestedAuth == "PIN")
+{
+    PINEntryPanel.IsVisible = true;
+}
+else
+{
+    await DisplayAlert(chargeResult.Status, chargeResult.Message, "OK");
+
+}
+```
+
+Next step if the charge requires a PIN
+
+```C#
+payload.Pin = "3310";
+payload.SuggestedAuth = "PIN";
+ if (chargeResult.Message == "AUTH_SUGGESTION" && chargeResult.Data.SuggestedAuth == "OTP")
+    {
+        OTPEntryPanel.IsVisible = true;
+    }
+    else
+    {
+        await DisplayAlert(chargeResult.Status, chargeResult.Message, "OK");
+    }
+```
+
+If an OTP is required
+
+```C#
+payload.SuggestedAuth = "OTP";
+payload.Otp = "12345";
+chargeResult = await cardCharge.Charge(payload);
+await DisplayAlert(chargeResult.Status, chargeResult.Message, "OK");
+```
+
+Happy Usage. 😍
+
+<!-- ## Configuration
 
 Add all relevant modules
 
@@ -447,4 +547,4 @@ var chargeResponse = subacc.Charge(payload).Result;
 
         }
     }
-    
+     -->
