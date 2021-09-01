@@ -14,12 +14,10 @@
     <Copyright>Dara Oladapo</Copyright>
     <ApplicationIcon>flwicon.ico</ApplicationIcon>
     <ReleaseVersion>0.02</ReleaseVersion>
-    <Version>1.0.2</Version>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
-    <FileVersion>1.0.2.0</FileVersion>
-    <PackageReleaseNotes>This version of release may contain some bugs as not all unit tests passed.
-
-Project is open to contribution.</PackageReleaseNotes>
+    <Version>1.0.3</Version>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
+    <FileVersion>1.0.3.0</FileVersion>
+    <PackageReleaseNotes>This version of release may contain some bugs as not all unit tests passed. Project is open to contribution.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
@@ -45,9 +43,9 @@ Project is open to contribution.</PackageReleaseNotes>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="DotNetEnv" Version="1.4.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="RestSharp" Version="106.11.4" />
+    <PackageReference Include="DotNetEnv" Version="2.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="RestSharp" Version="106.12.0" />
   </ItemGroup>
 
 </Project>
